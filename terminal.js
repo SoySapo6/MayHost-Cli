@@ -37,7 +37,7 @@ class TerminalClient {
     return new Promise((resolve) => {
       this.rl.question(chalk.cyan('🌐 Ingresa la URL base del servidor (ej: http://localhost:3000): '), (url) => {
         this.baseUrl = url.trim();
-        this.rl.question(chalk.cyan('🔑 Ingresa el token de Socket.IO: '), (token) => {
+        this.rl.question(chalk.cyan('🔑 Ingresa tu token: '), (token) => {
           this.token = token.trim();
           this.rl.close();
           resolve();
